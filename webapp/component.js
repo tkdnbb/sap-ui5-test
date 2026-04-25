@@ -6,12 +6,7 @@ sap.ui.define([
     "use strict";
     return UIComponent.extend("sap.ui5.test.Component", {
         metadata: {
-            rootView: {
-                viewName: "sap.ui5.test.view.App",
-                type: "XML",
-                async: true,
-                id: "app"
-            },
+            manifest: "json",
         },
         init: function () {
             UIComponent.prototype.init.apply(this, arguments);
