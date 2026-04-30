@@ -9,6 +9,11 @@
         width="auto"
         items="{invoice>/Invoices}"
     >
+        <headerToolbar>
+            <Toolbar>
+                <Title text="{i18n>invoiceListTitle}" />
+            </Toolbar>
+        </headerToolbar>
         <items>
             <ObjectListItem
                 title="{invoice>Quantity} x {invoice>ProductName}"
@@ -21,7 +26,14 @@
                 }"
                 numberUnit="{view>/currency}"
                 numberState="{= ${invoice>ExtendedPrice} > 50 ? 'Error' : 'Success' }"
-            />
+            >
+                    <firstStatus>
+                        <ObjectStatus text="{
+                            path: 'invoice>Status',
+                            formatter: '.formatter.statusText'
+                        }"/>
+                    </firstStatus>
+            </ObjectListItem>
         </items>
     </List>
 </mvc:View>
