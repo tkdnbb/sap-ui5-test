@@ -4,6 +4,7 @@
     xmlns:mvc="sap.ui.core.mvc"
 >
     <List
+        id="invoiceList"
         headerText="{i18n>invoiceListTitle}"
         class="sapUiResponsiveMargin"
         width="auto"
@@ -12,6 +13,12 @@
         <headerToolbar>
             <Toolbar>
                 <Title text="{i18n>invoiceListTitle}" />
+                <ToolbarSpacer />
+                <SearchField
+                    width="50%"
+                    placeholder="{i18n>searchPlaceholder}"
+                    search=".onFilterInvoices"
+                />
             </Toolbar>
         </headerToolbar>
         <items>
