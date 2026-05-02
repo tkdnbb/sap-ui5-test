@@ -15,3 +15,11 @@ html[dir="rtl"] .myAppDemoWT .myCustomButton.sapMBtn {
 .textCenter {
     text-align: center;
 }
+
+/*  ProductRating */
+.myAppDemoWTProductRating {
+	padding: 0.75rem;
+}
+.myAppDemoWTProductRating .sapMRI {
+	vertical-align: initial;
+}
