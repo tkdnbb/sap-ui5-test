@@ -70,6 +70,38 @@
         "uri": "Invoices.json"
       }
     },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "viewPath": "sap.ui5.test.view",
+        "controlId": "app",
+        "controlAggregation": "pages",
+        "async": true
+      },
+      "routes": [
+        {
+          "pattern": "",
+          "name": "overview",
+          "target": "overview"
+        },
+        {
+          "pattern": "detail",
+          "name": "detail",
+          "target": "detail"
+        }
+      ],
+      "targets": {
+        "overview": {
+          "viewId": "overview",
+          "viewName": "Overview"
+        },
+        "detail": {
+          "viewId": "detail",
+          "viewName": "Detail"
+        }
+      }
+    },
     "rootView": {
       "viewName": "sap.ui5.test.view.App",
       "type": "XML",
