@@ -6,11 +6,11 @@ sap.ui.define([
 ], function (Controller, MessageToast, JSONModel, ResourceModel) {
     "use strict";
     return Controller.extend("sap.ui5.test.controller.App", {
-        onShowHello: function () {
-            var oBundle = this.getView().getModel("i18n").getResourceBundle();
-            var sRecipient = this.getView().getModel().getProperty("/recipient/name");
-            var sMsg = oBundle.getText("helloMessage", [sRecipient]);
-            MessageToast.show(sMsg);
+        onInit: function () {
+            this.getView().addStyleClass(this.getOwnerComponent().getContentDensityClass());
+        },
+        onOpenDialog: function () {
+            this.getOwnerComponent().openHelloDialog();
         }
     });
 });
